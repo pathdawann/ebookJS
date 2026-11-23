@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Guía interactiva de JavaScript · Patricia Mago</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="bar">
+    <div class="bar-in">
+      <a href="#top" class="brand">Guía de JavaScript</a>
+      <a href="#toc" class="btn pill-prog" id="nav-prog" title="Ver índice de capítulos">0 / 11</a>
+      <button class="btn" id="th" type="button" aria-label="Cambiar tema">🌙 Oscuro</button>
+      <div class="prog" id="pg"></div>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="sheet hero">
+      <p class="lead hero-kicker">Guía interactiva · de tu primera variable a una página con vida</p>
+      <h1>Da vida a la web con <span>JavaScript</span></h1>
+      <p class="lead hero-sub">Escribe código y pulsa Ejecutar: el resultado aparece en la consola. Aprender a programar se hace programando.</p>
+      <div class="lab" data-k="hero"></div>
+      <p class="author-tag">Patricia Mago · @pathdawann</p>
+    </section>
+
+    <section class="sheet" id="toc">
+      <h2>Contenido</h2>
+      <p class="lead">Toca un capítulo para ir directo a él. Los que ya recorriste se marcan en verde.</p>
+      <p id="toc-n"></p>
+      <ol class="toc">
+        <li><a href="#t1"><b>1</b>¿Qué es JavaScript?</a></li>
+        <li><a href="#t2"><b>2</b>Variables y tipos de datos</a></li>
+        <li><a href="#t3"><b>3</b>Condicionales</a></li>
+        <li><a href="#t4"><b>4</b>Funciones</a></li>
+        <li><a href="#t5"><b>5</b>Arrays y bucles</a></li>
+        <li><a href="#t6"><b>6</b>Objetos</a></li>
+        <li><a href="#t7"><b>7</b>El DOM y los eventos</a></li>
+        <li><a href="#t8"><b>8</b>Código asíncrono</a></li>
+        <li><a href="#t9"><b>9</b>Buenas prácticas y errores</a></li>
+        <li><a href="#t10"><b>10</b>Ponte a prueba</a></li>
+        <li><a href="#t11"><b>11</b>Sigue aprendiendo</a></li>
+      </ol>
+    </section>
+
+    <section class="sheet" id="t1">
+      <h2><i>1</i>¿Qué es JavaScript?</h2>
+      <p class="lead">El lenguaje de programación de la web. Si HTML es el esqueleto y CSS la piel, <b>JavaScript son los músculos</b>: menús que se abren, formularios que validan, datos que se actualizan sin recargar. Nació en 1995 (Brendan Eich, en Netscape) y su estándar se llama <b>ECMAScript</b>. Hoy corre en el navegador y también en servidores con Node.js.</p>
+      <p class="lead">A diferencia de HTML, JavaScript sí es un lenguaje de programación: tiene variables, condiciones, bucles y funciones.</p>
+      <div class="lab" data-k="c1"></div>
+    </section>
+
+    <section class="sheet" id="t2">
+      <h2><i>2</i>Variables y tipos de datos</h2>
+      <p class="lead">Una variable es una caja con nombre. Usa <code>const</code> si el valor no cambia y <code>let</code> si cambiará. Evita <code>var</code>. Toca un valor para ver su tipo.</p>
+      <div class="tabs" id="chips"></div>
+      <div class="note" id="ty-n"></div>
+      <div class="lab" data-k="c2"></div>
+    </section>
+
+    <section class="sheet" id="t3">
+      <h2><i>3</i>Condicionales</h2>
+      <p class="lead">El código toma decisiones con <code>if</code>, <code>else if</code> y <code>else</code>. Mueve la edad.</p>
+      <div class="ctl">
+        <label>edad <input type="range" id="ea" min="0" max="80" value="20"></label>
+        <b id="ea-n" class="accent-label"></b>
+      </div>
+      <pre>if (edad >= 18) {
+  console.log("Mayor de edad");
+} else if (edad >= 12) {
+  console.log("Adolescente");
+} else {
+  console.log("Niño o niña");
+}</pre>
+      <div class="note" id="ea-r"></div>
+    </section>
+
+    <section class="sheet" id="t4">
+      <h2><i>4</i>Funciones</h2>
+      <p class="lead">Un bloque de código reutilizable. Recibe <em>parámetros</em> y devuelve un resultado con <code>return</code>. Las funciones flecha son una forma corta de escribirlas. Modifica y ejecuta.</p>
+      <div class="lab" data-k="c4"></div>
+    </section>
+
+    <section class="sheet" id="t5">
+      <h2><i>5</i>Arrays y bucles</h2>
+      <p class="lead">Un array es una lista ordenada. Aplica métodos y observa el resultado en vivo.</p>
+      <div class="tabs" id="am"></div>
+      <div class="stage"><div class="arr" id="ar"></div></div>
+      <pre id="ar-c"></pre>
+      <div class="lab" data-k="c5"></div>
+    </section>
+
+    <section class="sheet" id="t6">
+      <h2><i>6</i>Objetos</h2>
+      <p class="lead">Un objeto agrupa datos relacionados en pares <code>clave: valor</code>. Se accede con punto: <code>persona.nombre</code>.</p>
+      <div class="lab" data-k="c6"></div>
+    </section>
+
+    <section class="sheet" id="t7">
+      <h2><i>7</i>El DOM y los eventos</h2>
+      <p class="lead">El <b>DOM</b> es el árbol de elementos que el navegador crea desde tu HTML. JavaScript puede leerlo y modificarlo, y reaccionar a <b>eventos</b> como clics o teclas. Estos dos ejemplos funcionan con el código que ves.</p>
+      <pre>const boton = document.querySelector("#mas");
+boton.addEventListener("click", () => {
+  contador++;
+  numero.textContent = contador;
+});</pre>
+      <div class="stage counter-stage">
+        <button type="button" class="btn" id="menos">−</button>
+        <span id="cnt">0</span>
+        <button type="button" class="btn pill-prog" id="mas">+</button>
+      </div>
+      <pre>entrada.addEventListener("keydown", (e) => {
+  if (e.key === "Enter") {
+    const li = document.createElement("li");
+    li.textContent = entrada.value;
+    lista.append(li);
+  }
+});</pre>
+      <div class="stage">
+        <div class="ctl no-margin">
+          <input type="text" id="ti" placeholder="Escribe una tarea y pulsa Enter" class="todo-input" aria-label="Nueva tarea">
+        </div>
+        <ul id="tl"></ul>
+        <p class="lead todo-hint">Haz clic en una tarea para tacharla.</p>
+      </div>
+    </section>
+
+    <section class="sheet" id="t8">
+      <h2><i>8</i>Código asíncrono</h2>
+      <p class="lead">Algunas tareas tardan (pedir datos, esperar un temporizador). JavaScript no se detiene: las deja en cola y sigue. Predice el orden de salida y luego ejecuta.</p>
+      <div class="lab" data-k="c8"></div>
+      <pre>async function cargar() {
+  try {
+    const res = await fetch("https://api.ejemplo.com/datos");
+    const datos = await res.json();
+    console.log(datos);
+  } catch (error) {
+    console.error("No se pudo cargar", error);
+  }
+}</pre>
+      <p class="lead"><code>fetch</code> devuelve una promesa; <code>await</code> espera su resultado sin congelar la página.</p>
+    </section>
+
+    <section class="sheet" id="t9">
+      <h2><i>9</i>Buenas prácticas y errores</h2>
+      <table>
+        <tr><th>Error común</th><th>Mejor así</th></tr>
+        <tr><td><code>==</code> (compara con conversión)</td><td><code>===</code> (compara valor y tipo)</td></tr>
+        <tr><td><code>var</code></td><td><code>const</code> y <code>let</code></td></tr>
+        <tr><td>Funciones y variables con nombres como <code>x1</code></td><td>Nombres claros: <code>precioTotal</code></td></tr>
+        <tr><td>Ignorar los errores de la consola</td><td>Abre las herramientas (F12) y lee el mensaje</td></tr>
+        <tr><td>Repetir código</td><td>Crea una función</td></tr>
+      </table>
+      <div class="lab" data-k="c9"></div>
+    </section>
+
+    <section class="sheet" id="t10">
+      <div class="sec-head">
+        <h2><i>10</i>Ponte a prueba</h2>
+        <button type="button" class="mini-btn" id="qz-reset" hidden>↺ Repetir quiz</button>
+      </div>
+      <div id="qz"></div>
+      <p id="qs" class="quiz-score"></p>
+    </section>
+
+    <section class="sheet" id="t11">
+      <h2><i>11</i>Sigue aprendiendo</h2>
+      <p class="lead">Con HTML, CSS y JavaScript ya tienes la base del frontend. Siguiente ruta: Git y GitHub, un framework (React o Vue), consumir APIs y probar tu código. Y construye proyectos: una lista de tareas, un conversor, un juego.</p>
+      <p><b>MDN Web Docs</b> (developer.mozilla.org/es) · <b>javascript.info</b> · <b>freeCodeCamp</b> · <b>Exercism</b></p>
+      <p class="closing-title">¡Nos vemos en el código!</p>
+
+      <div class="next-step-box">
+        <div>
+          <p class="brand-eyebrow">Serie completa · Repasa las bases</p>
+          <h3>Explora las otras guías de la ruta frontend</h3>
+        </div>
+        <div class="series-actions">
+          <a href="https://hey-aprende-html.vercel.app" target="_blank" rel="noopener noreferrer" class="btn">← Guía de HTML</a>
+          <a href="https://hey-aprende-css.vercel.app" target="_blank" rel="noopener noreferrer" class="btn">Guía de CSS →</a>
+        </div>
+      </div>
+
+      <div class="brand-card">
+        <div class="brand-card-top">
+          <div>
+            <p class="brand-eyebrow">Creado por</p>
+            <h3>Patricia Mago · <span>@pathdawann</span></h3>
+          </div>
+          <a href="https://patriciamago.vercel.app" target="_blank" rel="noopener noreferrer" class="btn">Ver portafolio</a>
+        </div>
+        <p class="lead no-margin">Comunicación corporativa, desarrollo web y automatización. Si esta serie te ayudó a dar tus primeros pasos en la web, sigamos conectando.</p>
+
+        <div class="brand-links" aria-label="Enlaces de contacto y redes">
+          <a href="https://github.com/patriciamago" target="_blank" rel="noopener noreferrer" aria-label="GitHub" title="GitHub">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 0.297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+
+          <a href="https://www.linkedin.com/in/patriciamago" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" title="LinkedIn">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+
+          <a href="https://www.instagram.com/pathdawann" target="_blank" rel="noopener noreferrer" aria-label="Instagram" title="Instagram">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+            </svg>
+          </a>
+
+          <a href="mailto:patriciamagodev@gmail.com" aria-label="Correo electrónico" title="patriciamagodev@gmail.com">
+            <svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="4" width="20" height="16" rx="2"/>
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+            </svg>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
